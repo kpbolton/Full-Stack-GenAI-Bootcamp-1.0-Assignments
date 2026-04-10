@@ -1,0 +1,8 @@
+# Python version used for this notebook: 3.11.13
+# Recommended interpreter: Python 3.11.x
+
+numpy==1.26.4
+pandas==3.0.2
+scikit-learn==1.4.2
+nltk
+ipykernel==7.2.0
