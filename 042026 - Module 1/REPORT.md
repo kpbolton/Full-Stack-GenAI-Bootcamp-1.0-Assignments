@@ -31,11 +31,12 @@ The notebook applies a standard preprocessing sequence:
 
 ### Screenshots of preprocessing
 Words converted to lowercase, punctuation removed and tokenised
-![Words converted to lowercase, punctuation removed and tokenised](screenshots/01-task-1-preprocessing/01-preprocessing-initial.png){width=500}
 Removed English Stopwords
-![Removed English Stopwords](screenshots/01-task-1-preprocessing/02-preprocessing-stopwords.png){width=500}
-Lemmatisation of Tokens
-![Lemmatisation of Tokens](screenshots/01-task-1-preprocessing/03-preprocessing-lemmatisation.png){width=500}
+<img src="screenshots/01-task-1-preprocessing/01-preprocessing-initial.png" width="500">
+Preprocessing Stopwords
+<img src="screenshots/01-task-1-preprocessing/02-preprocessing-stopwords.png" width="500">
+Lemmatisation of tokens
+<img src="screenshots/01-task-1-preprocessing/03-preprocessing-lemmatisation.png" width="500">
 
 This pipeline reduces noise, normalizes lexical variants, and improves feature quality.
 
@@ -43,9 +44,9 @@ This pipeline reduces noise, normalizes lexical variants, and improves feature q
 - Created a vocabulary of unique words taken from the Amazon reviews using the OneHotEncoder function using the lemmatised tokens.
 
 Retrieving all words
-![Retrieving all words](screenshots/02-task-2-vocabulary/01-all-words.png){width=500}
+<img src="screenshots/02-task-2-vocabulary/01-all-words.png" width="500">
 Creating vocabulary
-![Creating vocabulary](screenshots/02-task-2-vocabulary/02-vocabulary.png){width=500}
+<img src="screenshots/02-task-2-vocabulary/02-vocabulary.png" width="500">
 
 ## 5. Feature Engineering Methods (Task 3)
 ### 5.1 One Hot Encoding (OHE)
@@ -53,28 +54,28 @@ Creating vocabulary
 - Value type: binary (0/1).
 - Advantage: simple and interpretable.
 - Limitation: ignores frequency and global importance.
-![](screenshots/03-task-3-feature-engineering/01-OHE-CODE.png){width=500}
-![](screenshots/03-task-3-feature-engineering/02-OHE-RESULT.png){width=500}
+<img src="screenshots/03-task-3-feature-engineering/01-OHE-CODE.png" width="500">
+<img src="screenshots/03-task-3-feature-engineering/02-OHE-RESULT.png" width="500">
 
 ### 5.2 Bag of Words (BoW)
 - Counts occurrences of terms within each document.
 - Value type: integer counts.
 - Advantage: captures within-document frequency.
 - Limitation: frequent common words can dominate.
-![](screenshots/03-task-3-feature-engineering/03-BOW-CODE.png){width=500}
-![](screenshots/03-task-3-feature-engineering/04-BOW-RESULT.png){width=500}
+<img src="screenshots/03-task-3-feature-engineering/03-BOW-CODE.png" width="500">
+<img src="screenshots/03-task-3-feature-engineering/04-BOW-RESULT.png" width="500">
 
 ### 5.3 TF-IDF
 - Weights each term by local frequency and global rarity.
 - Value type: weighted real values.
 - Advantage: highlights discriminative terms.
 - Limitation: less intuitive than raw counts.
-![](screenshots/03-task-3-feature-engineering/05-TFIDF-CODE.png){width=500}
-![](screenshots/03-task-3-feature-engineering/06-TFIDF-RESULT.png){width=500}
+<img src="screenshots/03-task-3-feature-engineering/05-TFIDF-CODE.png" width="500">
+<img src="screenshots/03-task-3-feature-engineering/06-TFIDF-RESULT.png" width="500">
 
 ### 5.4 Check for non-zero terms for all feature engineering methods
-![](screenshots/03-task-3-feature-engineering/07-NONZERO-CODE.png){width=500}
-![](screenshots/03-task-3-feature-engineering/08-NONZERO-RESULT.png){width=500}
+<img src="screenshots/03-task-3-feature-engineering/07-NONZERO-CODE.png" width="500">
+<img src="screenshots/03-task-3-feature-engineering/08-NONZERO-RESULT.png" width="500">
 
 ## 6. Comparison Analysis (Task 4)
 | Method | Vector Values | Uses Frequency | Considers Cross-Document Importance | Typical Sparsity | Best Use |
@@ -92,11 +93,11 @@ A term that appears in many documents has high document frequency, resulting in 
 
 ### Notebook screenshots
 Comparison table
-![](screenshots/04-task-4-comparison/01-Comparison-table.png){width=500}
+<img src="screenshots/04-task-4-comparison/01-Comparison-table.png" width="500">
 TF-IDF Most important words
-![](screenshots/04-task-4-comparison/02-TFIDF-Important-words.png){width=500}
+<img src="screenshots/04-task-4-comparison/02-TFIDF-Important-words.png" width="500">
 TF-IDF Most common words across documents.
-![](screenshots/04-task-4-comparison/03-Common-words-doc-frequency.png){width=500}
+<img src="screenshots/04-task-4-comparison/03-Common-words-doc-frequency.png" width="500">
 
 ## 7. Sparse Matrix Analysis (Task 5)
 All three text representations produce high-dimensional sparse matrices. This has practical implications:
@@ -107,13 +108,13 @@ All three text representations produce high-dimensional sparse matrices. This ha
 
 Operationally, sparse storage formats and feature selection are important for production-scale NLP pipelines.
 
-![](screenshots/05-task-5-sparse-matrix/01-Output.png){width=500}
+<img src="screenshots/05-task-5-sparse-matrix/01-Output.png" width="500">
 
 ## 8. Real-World Limitation Demonstration (Task 6)
 A small semantic similarity test showed that BoW and TF-IDF can miss synonym-level meaning when exact lexical overlap is low (for example, "movie" vs "film"). This motivates embeddings for deeper semantic tasks.
 
 Semantic similarity output
-![](screenshots/06-task-6-real-world-questions/01-semantic-similarity-demo.png){width=500}
+<img src="screenshots/06-task-6-real-world-questions/01-semantic-similarity-demo.png" width="500">
 
 ## 9. Mini Use Case: Sentiment Classification (Task 7)
 Two pipelines were trained and compared:
@@ -128,13 +129,13 @@ Two pipelines were trained and compared:
 
 ### Notebook screenshots
 Sentiment classification code.
-![](screenshots/07-task-7-mini-use-case/01-preparation-sentiment-classification-CODE.png){width=500}
+<img src="screenshots/07-task-7-mini-use-case/01-preparation-sentiment-classification-CODE.png" width="500">
 Encoding technique + Linear regression code.
-![](screenshots/07-task-7-mini-use-case/02-encoding-linear-regression-CODE.png){width=500}
+<img src="screenshots/07-task-7-mini-use-case/02-encoding-linear-regression-CODE.png" width="500">
 Results printing code.
-![](screenshots/07-task-7-mini-use-case/03-Results-CODE.png){width=500}
+<img src="screenshots/07-task-7-mini-use-case/03-Results-CODE.png" width="500">
 Task output
-![](screenshots/07-task-7-mini-use-case/04-task-OUTPUT.png){width=500}
+<img src="screenshots/07-task-7-mini-use-case/04-task-OUTPUT.png" width="500">
 
 ## 10. Final Recommendation
 For this assignment dataset and setup, TF-IDF + Logistic Regression is the recommended baseline model.
