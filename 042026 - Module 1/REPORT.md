@@ -31,11 +31,17 @@ The notebook applies a standard preprocessing sequence:
 
 ### Screenshots of preprocessing
 Words converted to lowercase, punctuation removed and tokenised
+
 Removed English Stopwords
+
 <img src="screenshots/01-task-1-preprocessing/01-preprocessing-initial.png" width="500">
+
 Preprocessing Stopwords
+
 <img src="screenshots/01-task-1-preprocessing/02-preprocessing-stopwords.png" width="500">
+
 Lemmatisation of tokens
+
 <img src="screenshots/01-task-1-preprocessing/03-preprocessing-lemmatisation.png" width="500">
 
 This pipeline reduces noise, normalizes lexical variants, and improves feature quality.
@@ -44,8 +50,11 @@ This pipeline reduces noise, normalizes lexical variants, and improves feature q
 - Created a vocabulary of unique words taken from the Amazon reviews using the OneHotEncoder function using the lemmatised tokens.
 
 Retrieving all words
+
 <img src="screenshots/02-task-2-vocabulary/01-all-words.png" width="500">
+
 Creating vocabulary
+
 <img src="screenshots/02-task-2-vocabulary/02-vocabulary.png" width="500">
 
 ## 5. Feature Engineering Methods (Task 3)
@@ -54,6 +63,7 @@ Creating vocabulary
 - Value type: binary (0/1).
 - Advantage: simple and interpretable.
 - Limitation: ignores frequency and global importance.
+
 <img src="screenshots/03-task-3-feature-engineering/01-OHE-CODE.png" width="500">
 <img src="screenshots/03-task-3-feature-engineering/02-OHE-RESULT.png" width="500">
 
@@ -62,6 +72,7 @@ Creating vocabulary
 - Value type: integer counts.
 - Advantage: captures within-document frequency.
 - Limitation: frequent common words can dominate.
+
 <img src="screenshots/03-task-3-feature-engineering/03-BOW-CODE.png" width="500">
 <img src="screenshots/03-task-3-feature-engineering/04-BOW-RESULT.png" width="500">
 
@@ -70,10 +81,12 @@ Creating vocabulary
 - Value type: weighted real values.
 - Advantage: highlights discriminative terms.
 - Limitation: less intuitive than raw counts.
+
 <img src="screenshots/03-task-3-feature-engineering/05-TFIDF-CODE.png" width="500">
 <img src="screenshots/03-task-3-feature-engineering/06-TFIDF-RESULT.png" width="500">
 
 ### 5.4 Check for non-zero terms for all feature engineering methods
+
 <img src="screenshots/03-task-3-feature-engineering/07-NONZERO-CODE.png" width="500">
 <img src="screenshots/03-task-3-feature-engineering/08-NONZERO-RESULT.png" width="500">
 
@@ -92,11 +105,17 @@ TF-IDF(t, d) = TF(t, d) x IDF(t)
 A term that appears in many documents has high document frequency, resulting in lower IDF. Therefore, globally common words receive lower final TF-IDF weight.
 
 ### Notebook screenshots
+
 Comparison table
+
 <img src="screenshots/04-task-4-comparison/01-Comparison-table.png" width="500">
+
 TF-IDF Most important words
+
 <img src="screenshots/04-task-4-comparison/02-TFIDF-Important-words.png" width="500">
+
 TF-IDF Most common words across documents.
+
 <img src="screenshots/04-task-4-comparison/03-Common-words-doc-frequency.png" width="500">
 
 ## 7. Sparse Matrix Analysis (Task 5)
@@ -128,13 +147,21 @@ Two pipelines were trained and compared:
 | TF-IDF + Logistic Regression | 0.9479 | 0.9719 | 0.8085 |
 
 ### Notebook screenshots
+
 Sentiment classification code.
+
 <img src="screenshots/07-task-7-mini-use-case/01-preparation-sentiment-classification-CODE.png" width="500">
+
 Encoding technique + Linear regression code.
+
 <img src="screenshots/07-task-7-mini-use-case/02-encoding-linear-regression-CODE.png" width="500">
+
 Results printing code.
+
 <img src="screenshots/07-task-7-mini-use-case/03-Results-CODE.png" width="500">
+
 Task output
+
 <img src="screenshots/07-task-7-mini-use-case/04-task-OUTPUT.png" width="500">
 
 ## 10. Final Recommendation
